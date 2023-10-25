@@ -1,55 +1,51 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Content = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-    background-color:#121212;
-    height:70px;
     color: white;
-    margin: -1rem -0.5rem;
 `
-export const Menu = styled.div`
+export const Carrosel = styled.div`
+    background-color:#121212;
+    margin-top: 2rem;
+`
+export const Cards = styled.div`
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction:column;
     gap:1rem;
-    &:hover{
-        background-color: #363839;
-        border-radius: 0.5rem;
-        padding:5px;
-    }
 `
-export const Input = styled.div`
+export const Nota = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 0.5rem;
-    position: relative;
-    border: 1px solid yellow;
+    gap: 0.5rem;
 `
-export const Favorite = styled.div`
+export const Title = styled.div`
     display: flex;
     justify-content: center;
-    align-items: center; 
-    gap:0.5rem;
-    cursor:pointer;
-    &:hover{
-        background-color: #363839;
-        border-radius: 0.5rem;
-        padding:5px;
-    }
+    align-items: center;
 `
-export const Login = styled.div`
+export const Footer = styled.div`
     display: flex;
-    justify-content: center;
-    align-items: center; 
-    gap:1rem;   
+    align-items: center;
+    justify-content: space-around;
+`
+export const Play = styled.div`
+    display: flex;
+    justify-content: start;
+    align-items: center;
     cursor: pointer;
     &:hover{
-        background-color: #363839;
-        border-radius: 0.5rem;
-        padding:10px;
+        border: 1px solid #252323f5;
+        background: #252323f5;
+        border-radius: 5px;
+        padding: 0.5rem;
+    }
+`
+export const Information = styled.div`
+    cursor: pointer;
+    &:hover{
+        border: 1px solid #252323f5;
+        background: #252323f5;
+        border-radius: 100%;
+        padding: 0px 17px;
     }
 `
