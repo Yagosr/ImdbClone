@@ -22,6 +22,12 @@ export const Title = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size:12px
+`
+export const Subtitle = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size:15px
 `
 

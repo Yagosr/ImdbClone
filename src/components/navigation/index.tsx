@@ -1,15 +1,15 @@
   import React, { useEffect, useState } from "react";
+  import getConfig from "../../config/key";
 
   import "swiper/css";
   import 'swiper/css/navigation';
   import "swiper/css/pagination";
   import "swiper/css/scrollbar";
 
-  import {Content, Carrosel, Cards, Nota, Title} from "./style";
-  import { Swiper, SwiperSlide} from 'swiper/react';
-  import {register} from 'swiper/element/bundle';
-  import getConfig from "../../config/key";
   import { Link } from "react-router-dom";
+  import {register} from 'swiper/element/bundle';
+  import { Swiper, SwiperSlide} from 'swiper/react';
+  import {Content, Carrosel, Cards, Title, Subtitle} from "./style";
 
   register()
 
@@ -49,9 +49,9 @@
                             />
                       </Link>
                       <Cards>
-                          {/* <Nota>
-                            {movie.vote_average}
-                          </Nota> */}
+                          <Subtitle>
+                            {movie.release_date}
+                          </Subtitle>
                           <Title>
                             {movie.title}
                           </Title>

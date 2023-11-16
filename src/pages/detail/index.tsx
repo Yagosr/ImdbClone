@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router";
 import getConfig from "../../config/key";
+
+import { useParams } from "react-router";
+import { Container, Content } from "./style";
 
 const Detail: React.FC = () => {
 
     const { id } = useParams();
-    const [movies, setMovies] = useState<any>({})
+    const [movies, setMovie] = useState<any>([])
     const image_path = 'https://image.tmdb.org/t/p/w500'
     
     const config = getConfig();
@@ -21,13 +23,19 @@ const Detail: React.FC = () => {
                 image: `${image_path}${data.poster_path}`,
                 releaseDate: data.release_date 
             }
-            setMovies(movie)
+            setMovie(movie)
         })
     },[id])
 
     return(
        <>
-            <h1 style={{color:'white'}}>Hello World</h1>
+        <Container>
+            <h1>Detalhes Do Filme</h1>
+            <Content>
+                
+            </Content>
+
+        </Container>
        </>
     )
 }

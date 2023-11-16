@@ -14,7 +14,7 @@ export const Carrosel = styled.div`
     
 `
 export const ContentRight = styled.div`
-  padding-top:2rem;
+  padding-top:1rem;
   display:flex;
   flex-direction:column;
   gap:1rem;
