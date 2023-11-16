@@ -36,10 +36,14 @@ export const ListRight = styled.div`
 export const Play = styled.div`
     display: flex;
     gap: 0.5rem;
-    cursor: pointer;
-    color: white;
-    &:hover{
-        color: yellow;
+
+    .link{
+        cursor: pointer;
+        color: white;
+
+        &:hover{
+            color: yellow;
+        }
     }
 `
 export const Title = styled.div`

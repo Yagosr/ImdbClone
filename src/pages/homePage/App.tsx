@@ -72,7 +72,7 @@ const App: React.FC = () => {
                     </div>
                     <ListRight>
                       <Play>
-                        <a href="https://www.youtube.com/watch?v=Rt0kp4VW1cI">
+                        <a className="link" href="https://www.youtube.com/watch?v=Rt0kp4VW1cI">
                           <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-play-circle"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
                         </a>
                         <p style={{color: 'gray'}}>1:57</p>
@@ -93,7 +93,7 @@ const App: React.FC = () => {
                     </div>
                     <ListRight>
                       <Play>
-                        <a href="https://www.youtube.com/watch?v=t3PzUo4P21c">
+                        <a className="link" href="https://www.youtube.com/watch?v=t3PzUo4P21c">
                           <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-play-circle"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
                         </a>
                         <p style={{color: 'gray'}}>2:21</p>
@@ -114,7 +114,7 @@ const App: React.FC = () => {
                     </div>
                     <ListRight>
                       <Play>
-                        <a href="https://www.youtube.com/watch?v=jzQn0-WH4WM">
+                        <a className="link" href="https://www.youtube.com/watch?v=jzQn0-WH4WM">
                           <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-play-circle"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
                         </a>
                         <p style={{color: 'gray'}}>2:17</p>

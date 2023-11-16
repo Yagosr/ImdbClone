@@ -23,7 +23,6 @@
           fetch(`https://api.themoviedb.org/3/movie/popular?language=en-US&page=1&api_key=${config.apiKey}`)
           .then(response => response.json())
           .then(data => {
-            console.log(data.results)
             setMovies(data.results)
           })
         }, [])
