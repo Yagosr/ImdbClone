@@ -7,6 +7,8 @@ import "swiper/css/scrollbar";
 
 import { Swiper, SwiperSlide} from 'swiper/react'
 import {register} from 'swiper/element/bundle'
+import Navigation from "../../components/navigation/index.tsx";
+import Menu from "../../components/menu/index.tsx";
 
 register()
 
@@ -20,6 +22,7 @@ const App: React.FC = () => {
 
   return (
     <div>
+      <Menu/>
         <Content>
           <Home>
             <Card>
@@ -102,6 +105,7 @@ const App: React.FC = () => {
             </ContentRight>
           </Home>
         </Content>
+        <Navigation/>
     </div>
   );
 }

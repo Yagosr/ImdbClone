@@ -22,30 +22,6 @@ export const Title = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size:15px
 `
-export const Footer = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-`
-export const Play = styled.div`
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    cursor: pointer;
-    &:hover{
-        border: 1px solid #252323f5;
-        background: #252323f5;
-        border-radius: 5px;
-        padding: 0.5rem;
-    }
-`
-export const Information = styled.div`
-    cursor: pointer;
-    &:hover{
-        border: 1px solid #252323f5;
-        background: #252323f5;
-        border-radius: 100%;
-        padding: 0px 17px;
-    }
-`
+
