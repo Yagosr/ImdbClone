@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 
-import {Carrosel, Content, ContentRight, Home, Card, List, ListRight, Next, Play, Title, Description} from "./style";
-import { Swiper, SwiperSlide} from 'swiper/react'
 import {register} from 'swiper/element/bundle'
+import { Swiper, SwiperSlide} from 'swiper/react'
+import {Carrosel, Content, ContentRight, Home, Card, List, ListRight, Next, Play, Title, Description} from "./style";
 
 import "swiper/css";
 import 'swiper/css/navigation';
@@ -18,6 +18,7 @@ register()
 const App: React.FC = () => {
   
   const [movies, setMovies] = useState<any>([])
+  const [isLoading, setIsLoading] = useState(true)
   
   const image_path = 'https://image.tmdb.org/t/p/w500'
   const config = getConfig();
@@ -30,6 +31,7 @@ const App: React.FC = () => {
     .then(response => response.json())
     .then(data => {
       setMovies(data.results.slice(0,3))
+      setIsLoading(false)
     })
   }, [])
 
@@ -63,7 +65,7 @@ const App: React.FC = () => {
         
             <ContentRight>
               <Next>
-                <span>A seguir</span>
+                <span>Next</span>
               </Next>
               {firstMovie && (
                 <List>

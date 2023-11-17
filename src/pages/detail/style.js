@@ -43,7 +43,7 @@ export const Percent = styled.div`
     font-size:20px;
 
     .vote{
-        color: green;
+        
     }
 `
 export const Footer = styled.div`
@@ -82,5 +82,16 @@ export const Button = styled.div`
     &:hover{
         background-color: white;
         color:black;
+    }
+`
+
+export const Bilheteria = styled.div`
+    display: flex;
+    align-items:center;
+    margin: 1.5rem 0;
+    gap: 0.5rem;
+
+    span{
+        color: green;
     }
 `
