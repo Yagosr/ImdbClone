@@ -1,7 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import { Content, Input, NavMenu, Favorite, Login} from "./style";
+import getConfig from "../../config/key";
+import { useParams } from "react-router-dom";
 
 const Menu: React.FC = () => {
+
+  const { id } = useParams();
+  const [searchTerm, setSearchTerm] = useState("");
+  const config = getConfig();
+
+  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const handleSearchSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
+    fetch(`https://api.themoviedb.org/3/find/${id}?external_source=&api_key=${config.apiKey}`)
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+      })
+      .catch(error => {
+        console.error("Erro na solicitação:", error);
+      });
+  };
+
+
     return(
         <Content>
               <NavMenu>
@@ -9,14 +33,23 @@ const Menu: React.FC = () => {
                 <strong>Menu</strong>
               </NavMenu>
               <img style={{borderRadius: '0.5rem'}} src="./img/download.png" alt="Logo-IMDB" width={'75px'} height={'35px'} />
-              <Input>
-                <input style={{ border:'none', borderRadius:'5px', width: "600px", height: "35px", paddingRight: "30px"}} type="search" placeholder="Pesquisar na IMDb"/>
-                <i style={{position: "absolute", top: "0.2rem", right: "0.5rem", margin: "7px", cursor: "pointer"}}>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" className="bi bi-search" viewBox="0 0 16 16">
-                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398l3.85 3.85a1 1 0 1 0 1.397-1.398l-3.85-3.85zM2 6.5a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0z"/>
-                  </svg>
-              </i>
-              </Input>
+              <form onSubmit={handleSearchSubmit}>
+                <Input>
+                    <input 
+                        style={{ border:'none', borderRadius:'5px', width: "600px", height: "35px", paddingRight: "30px"}} 
+                        type="search" 
+                        placeholder="Pesquisar na IMDb"
+                        value={searchTerm}
+                        onChange={handleSearchChange}
+                      />
+
+                    <i style={{position: "absolute", top: "0.2rem", right: "0.5rem", margin: "7px", cursor: "pointer"}}>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" className="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398l3.85 3.85a1 1 0 1 0 1.397-1.398l-3.85-3.85zM2 6.5a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0z"/>
+                      </svg>
+                  </i>
+                </Input>
+              </form>
               <div>
                 <strong style={{fontSize:'35px', color:'gray'}}>|</strong>
               </div>
