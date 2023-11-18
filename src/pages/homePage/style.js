@@ -33,6 +33,7 @@ export const Carrosel = styled.div`
 export const ContentRight = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 1rem;
 
   @media (max-width: 768px) {
     display: none;
@@ -43,7 +44,8 @@ export const Next = styled.div`
   color: white;
   font-size: 30px;
   color: yellow;
-  margin-top: 1rem;
+  margin-bottom: -2rem;
+  margin-top: 1.5rem;
 `;
 
 export const List = styled.div`

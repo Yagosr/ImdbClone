@@ -41,7 +41,7 @@ const Menu: React.FC = () => {
                     <input 
                         style={{ border:'none', borderRadius:'5px', width: "600px", height: "35px", paddingRight: "30px"}} 
                         type="search" 
-                        placeholder="Pesquisar na IMDb"
+                        placeholder="Search Films"
                         value={searchTerm}
                         onChange={handleSearchChange}
                       />
