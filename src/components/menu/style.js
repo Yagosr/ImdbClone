@@ -9,6 +9,8 @@ export const Content = styled.div`
     height:70px;
     color: white;
     margin: -1rem -0.5rem;
+
+    @media()
 `
 export const NavMenu = styled.div`
     display: flex;
