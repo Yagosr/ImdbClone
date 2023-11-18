@@ -1,0 +1,30 @@
+# Exemplo básico
+[build]
+  command = "npm run build"
+  publish = "build/"
+
+# Configurações adicionais comuns
+[settings]
+  node_version = "14"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+    [headers.values]
+    Access-Control-Allow-Origin = "*"
+
+[context.production]
+  command = "npm run build:production"
+
+[context.deploy-preview]
+  command = "npm run build:preview"
+
+[context.branch-deploy]
+  command = "npm run build:branch"
+
+[context.split1]
+  command = "npm run build:split1"
